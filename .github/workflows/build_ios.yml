@@ -1,0 +1,37 @@
+name: Build iOS
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    name: Build iOS
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.24.x' # Optionally pin your version
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Note: To build an IPA for the App Store, you need Apple Developer Certificates and Provisioning Profiles.
+      # This step builds an unsigned .app bundle. 
+      # Once you get certificates, change the command below to: flutter build ipa --release
+      - name: Build iOS App (Unsigned)
+        run: flutter build ios --release --no-codesign
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-build
+          path: build/ios/iphoneos/Runner.app

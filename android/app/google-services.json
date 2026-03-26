@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "935006171646",
+    "firebase_url": "https://axolink-2f655-default-rtdb.firebaseio.com",
+    "project_id": "axolink-2f655",
+    "storage_bucket": "axolink-2f655.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935006171646:android:8e3fce1dd72574747890af",
+        "android_client_info": {
+          "package_name": "com.axolink.axolink_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935006171646-8q6avai37vi7leb2bnpufoevtf29a71p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkIe8wNhu0xwleBoouPst1fuPxvw38zC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935006171646-8q6avai37vi7leb2bnpufoevtf29a71p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
